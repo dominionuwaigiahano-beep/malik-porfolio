@@ -2,8 +2,8 @@ export default function About() {
   const stats = [
     { number: 'GWR', label: 'Guinness World Record', sub: 'One time Smallest Rubiks Cube Solver' },
     { number: '15s', label: 'Rubiks Cube Speed', sub: 'Personal best solve time' },
-    { number: 'BSc', label: 'Cybersecurity', sub: 'University Graduate' },
-    { number: 'PCL', label: 'Prime Capital', sub: 'Finance Professional' },
+    { number: 'BSc', label: 'Computer Science', sub: 'University Graduate' },
+    { number: 'PCI', label: 'Prime Capital', sub: 'Finance Professional' },
   ]
 
   return (
@@ -33,7 +33,7 @@ export default function About() {
             <div style={{width: '50px', height: '1px', background: '#D4AF37', marginBottom: '32px'}} />
 
             <p style={{fontFamily: "'Montserrat', sans-serif", fontSize: '14px', color: '#555', lineHeight: '2', marginBottom: '20px', fontWeight: '300'}}>
-              Known as <span style={{color: '#D4AF37'}}>Cyber Domm</span> — I hold a Guinness World Record as the world's smallest Rubiks cube solver and a BSc in Cybersecurity. I bring the same precision and problem-solving discipline to everything I do.
+              Known as <span style={{color: '#D4AF37'}}>Cyber Domm</span> — I once held a Guinness World Record as the world's smallest Rubiks cube solver and a BSc in Computer Science and a master in Cybersecurity. I bring the same precision and problem-solving discipline to everything I do.
             </p>
 
             <p style={{fontFamily: "'Montserrat', sans-serif", fontSize: '14px', color: '#555', lineHeight: '2', marginBottom: '20px', fontWeight: '300'}}>
