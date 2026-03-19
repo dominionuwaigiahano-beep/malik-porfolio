@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #080808;
+  background-color: #050505;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
@@ -56,6 +56,11 @@ body {
   to { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
@@ -71,9 +76,12 @@ body {
 .animate-slideRight { animation: slideRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
 .animate-float { animation: float 8s ease-in-out infinite; }
 .animate-pulse-gold { animation: pulse-gold 4s ease-in-out infinite; }
-.animate-fadeIn { animation: fadeIn 1.2s ease forwards; }
 
 .gold { color: #D4AF37; }
+.gold-light { color: #F0D060; }
+.muted { color: #666; }
+.faint { color: #333; }
+
 .display-font { font-family: 'Cormorant Garamond', serif; }
 
 .gold-line {
@@ -136,7 +144,6 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  z-index: 0;
 }
 
 .btn-gold::before {
@@ -149,15 +156,20 @@ body {
   z-index: -1;
 }
 
-.btn-gold:hover { color: #000; }
-.btn-gold:hover::before { left: 0; }
+.btn-gold:hover {
+  color: #000;
+}
+
+.btn-gold:hover::before {
+  left: 0;
+}
 
 .btn-gold-solid {
   background: #D4AF37;
   border: 1px solid #D4AF37;
   color: #000;
   padding: 15px 40px;
-  font-size: 12px;
+  font-size: 11px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -170,7 +182,7 @@ body {
 
 .btn-gold-solid:hover {
   background: transparent;
-  color: #d3a50f;
+  color: #D4AF37;
 }
 
 .skill-pill {
@@ -192,7 +204,7 @@ body {
 }
 
 .input-premium {
-  background: rgba(31, 88, 163, 0.02);
+  background: rgba(255,255,255,0.02);
   border: none;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   color: #fff;
@@ -205,10 +217,12 @@ body {
   letter-spacing: 0.5px;
 }
 
-.input-premium:focus { border-bottom-color: #D4AF37; }
+.input-premium:focus {
+  border-bottom-color: #D4AF37;
+}
 
 .input-premium::placeholder {
-  color: #d18b8b;
+  color: #333;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
